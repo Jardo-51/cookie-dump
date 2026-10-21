@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Cookie Dump</title>
+    <link rel="stylesheet" href="options.css" />
+    <script type="module" src="options.js"></script>
+  </head>
+  <body>
+    <h1>Cookie Dump</h1>
+    <p class="intro">
+      Saves the cookies a browser would send to a site into a file, as a
+      <code>Cookie</code> header value. Files are updated whenever the cookies change.
+    </p>
+
+    <p id="helper-status" class="banner">Checking the native helper…</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>On</th>
+          <th>Site URL</th>
+          <th>File</th>
+          <th>Mode</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="rules"></tbody>
+    </table>
+    <p id="empty" class="hint" hidden>No sites yet. Add one below.</p>
+
+    <h2>Add a site</h2>
+    <form id="add-form">
+      <label>
+        Site URL
+        <input name="url" placeholder="https://jira.example.com/" required />
+      </label>
+      <label>
+        File
+        <input name="path" placeholder="/tmp/jira-cookies.txt" required />
+      </label>
+      <label class="mode">
+        Mode
+        <input name="mode" value="644" required />
+      </label>
+      <button type="submit">Add</button>
+    </form>
+    <p id="add-error" class="error" hidden></p>
+    <p class="hint">
+      Mode 644 lets every user on this machine read the file. Use 600 (owner only) or 640
+      (owner and group) if the directory's group is shared with the reading user.
+      The browser asks for access to the site and its parent domains, because cookies
+      can be set on a parent domain.
+    </p>
+
+    <p><button id="sync-now" type="button">Write all files now</button></p>
+  </body>
+</html>

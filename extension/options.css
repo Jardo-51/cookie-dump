@@ -1,0 +1,78 @@
+:root {
+  color-scheme: light dark;
+  font: 14px/1.5 system-ui, sans-serif;
+}
+
+body {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.intro,
+.hint {
+  color: GrayText;
+}
+
+.banner {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  background: color-mix(in srgb, CanvasText 6%, Canvas);
+}
+
+.banner.error,
+.error {
+  color: #d33;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.35rem 0.5rem;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid color-mix(in srgb, CanvasText 15%, Canvas);
+}
+
+td.url {
+  word-break: break-all;
+}
+
+td input[name="path"] {
+  width: 100%;
+  min-width: 16rem;
+}
+
+input[name="mode"] {
+  width: 4rem;
+}
+
+td.status {
+  font-size: 12px;
+}
+
+.ok {
+  color: #2a2;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: end;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+form input[name="url"],
+form input[name="path"] {
+  width: 20rem;
+}

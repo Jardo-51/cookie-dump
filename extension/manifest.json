@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Cookie Dump",
+  "version": "0.1.0",
+  "description": "Saves the cookies of chosen websites into local files.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn/UzzRWujVdFyR7s1ViNPaNJaJwiz72MMaQMAbRDfa52CUqVAXd/eObWkgwzyhhOaKrNNL9j+4vFiZovhEJk2VlIrjHUxRCfB1nSU91cZzGi+8WZtH+7grixYCUHacLF6eH7eRRcBxdun1UCNMB5wCpeg7q/RVByTZO4K86XE5cypLjps5GIIXPZR4I+oJop31rAgxpXHHoEY5cf1RddwQ14dYQEq4CkFkfPFbVWEUQG5mMKArGvVF2AnhS/NlwZCLxxJnT49kyD49RLFWFLV2Iz3Mut2O6yQHvbbFlM8VP532A6nhHyu4Wdm4pzOCgL9ZRnbRqsckfY6qQQhCOaYQIDAQAB",
+  "permissions": [
+    "cookies",
+    "nativeMessaging",
+    "storage"
+  ],
+  "optional_host_permissions": [
+    "*://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "action": {
+    "default_title": "Cookie Dump settings"
+  }
+}
